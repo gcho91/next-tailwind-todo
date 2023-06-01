@@ -37,7 +37,7 @@ export default function List({ list, setList }: ListProps) {
 
     const PriorityPill = ({ level }) => {
         return <span
-            className={`rounded-lg text-xs text-white p-0.5 bg-red-500 text-[8px] align-middle`}
+            className={`rounded-lg text-white p-0.5 bg-red-500 text-[8px] align-middle`}
         >{level}</span>
     }
     // custom style on checkbox
