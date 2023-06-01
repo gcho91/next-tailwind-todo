@@ -31,39 +31,35 @@ export default function List({ list, setList }: ListProps) {
 
         console.log(currentTasks)
         setList(currentTasks)
-
     }
-
 
     const DisplayEmptyList = () => <h1>List is Empty :'(</h1>
 
     const PriorityPill = ({ level }) => {
-
         return <span
-            className={`rounded-lg text-xs text-white p-0.5 bg-red-500`}
+            className={`rounded-lg text-xs text-white p-0.5 bg-red-500 text-[8px] align-middle`}
         >{level}</span>
     }
     // custom style on checkbox
     // https://webdesign.tutsplus.com/tutorials/how-to-make-custom-accessible-checkboxes-and-radio-buttons--cms-32074
     return <>
-
         <ul >
             {list.length === 0 ? <DisplayEmptyList /> :
                 list.map((item, ind) => {
                     return <li key={ind} className="flex justify-between border-solid border-0 border-b border-stone-300"
                     >
-                        <div className="left-container">
+                        <div className="left-container py-2 ">
 
                             <input type="checkbox"
+                                className="align-middle"
                                 checked={item.isDone}
                                 onChange={() => toggleCompleted(ind)}
                             />
                             <label
                                 onClick={() => toggleCompleted(ind)}
-                                className={item.isDone ? "todo-text todo-completed" : "todo-text"}
+                                className={item.isDone ? "todo-text todo-completed pl-1 text-sm" : "todo-text pl-1 text-sm"}
                             >{item.name} </label>
-                            {/* <PriorityPill level={item.priority} />
-                        <Pill /> */}
+                            <PriorityPill level={item.priority} />
                         </div>
                         <button
                             onClick={() => handleDelete(item.id)}>
@@ -72,7 +68,6 @@ export default function List({ list, setList }: ListProps) {
                             </svg>
                         </button>
                     </li>
-
                 })
             }
         </ul >
@@ -108,10 +103,7 @@ export default function List({ list, setList }: ListProps) {
                     animation-iteration-count: 1;
                     animation-fill-mode: forwards;
                     // animation-delay: -0.5s;
-
             }
-
-   
 
       
             `}

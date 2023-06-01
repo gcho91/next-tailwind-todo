@@ -58,7 +58,7 @@ export default function TodoListParent() {
 
     return <>
         <div className="parent-container">
-            <h1 className="">To do list </h1>
+            <h1 className="text-xl">To Do List App </h1>
             <InputField
                 todoText={todoText}
                 setTodoText={setTodoText}
@@ -70,8 +70,7 @@ export default function TodoListParent() {
             />
 
             <div>
-                <h3>Completed Tasks:  {getTotalCompleted()} / {todoList.length} </h3>
-
+                <p className="text-xs py-2">Completed Tasks:  {getTotalCompleted()} / {todoList.length} </p>
             </div>
 
         </div>
@@ -81,7 +80,6 @@ export default function TodoListParent() {
             .parent-container {
                 max-width: 500px;
                 margin: 0 auto;
-                // background-color: orange;
             }
       
             `}
