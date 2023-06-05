@@ -43,7 +43,7 @@ export default function TodoListParent() {
                     // +1 = returns the increment value
                     // so if i wanted to use same logic, i need to pass the id 
                     isDone: false,
-                    priority: "high"
+                    priority: "High"
 
                 })
             )
