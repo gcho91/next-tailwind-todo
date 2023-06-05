@@ -8,19 +8,19 @@ let initialList = [
         id: id++,
         name: "Walk the cat",
         isDone: false,
-        priority: "high"
+        priority: "High"
     },
     {
         id: id++,
         name: "Feed the human",
         isDone: false,
-        priority: "high"
+        priority: "Medium"
 
     }, {
         id: id++,
         name: "Eat the cake",
         isDone: false,
-        priority: "low"
+        priority: "Low"
 
     }
 ]

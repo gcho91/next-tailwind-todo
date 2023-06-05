@@ -35,11 +35,6 @@ export default function List({ list, setList }: ListProps) {
 
     const DisplayEmptyList = () => <h1>List is Empty :'(</h1>
 
-    const PriorityPill = ({ level }) => {
-        return <span
-            className={`rounded-lg text-white p-0.5 bg-red-500 text-[8px] align-middle`}
-        >{level}</span>
-    }
     // custom style on checkbox
     // https://webdesign.tutsplus.com/tutorials/how-to-make-custom-accessible-checkboxes-and-radio-buttons--cms-32074
     return <>
@@ -59,7 +54,7 @@ export default function List({ list, setList }: ListProps) {
                                 onClick={() => toggleCompleted(ind)}
                                 className={item.isDone ? "todo-text todo-completed pl-1 text-sm" : "todo-text pl-1 text-sm"}
                             >{item.name} </label>
-                            <PriorityPill level={item.priority} />
+                            <Pill level={item.priority} />
                         </div>
                         <button
                             onClick={() => handleDelete(item.id)}>
