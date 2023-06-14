@@ -79,9 +79,11 @@ export default function TodoListParent() {
             {`
             .parent-container {
                 max-width: 500px;
-                margin: 0 auto;
+                background-color:salmon;
+                margin: 20px auto;
+                padding: 15px;
+                border-radius: 20px;
             }
-      
             `}
         </style>
     </>
